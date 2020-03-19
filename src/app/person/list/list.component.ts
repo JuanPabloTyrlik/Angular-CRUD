@@ -19,4 +19,16 @@ export class ListComponent implements OnInit {
       .subscribe(data => this.people = data);
   }
 
+  edit(p: Person) {
+    localStorage.setItem('id', p.id.toString());
+    this.router.navigate(['edit']);
+  }
+
+  delete(p: Person) {
+    this.service.deletePerson(p)
+      .subscribe( data => {
+        this.people = this.people.filter(person => person !== p);
+      });
+  }
+
 }

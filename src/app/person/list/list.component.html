@@ -14,7 +14,7 @@
                 <tbody>
                     <tr class="text-center" *ngFor="let person of people">
                         <td>{{ person.name }}</td>
-                        <td><i class="fas fa-user-edit mr-5"></i><i class="fas fa-user-minus ml-5"></i></td>
+                        <td><i class="fas fa-user-edit mr-5" (click)="edit(person)"></i><i class="fas fa-user-minus ml-5" (click)="delete(person)"></i></td>
                     </tr>
                 </tbody>
             </table>

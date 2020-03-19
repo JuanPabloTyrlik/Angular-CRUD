@@ -6,10 +6,9 @@
         <div class="card-body">
             <form action="">
                 <div class="form-group">
-                    <label for="">Name: </label>
                     <input type="text" class="form-control" [(ngModel)]="newPerson.name" placeholder="Name" [ngModelOptions]="{standalone: true}">
                 </div>
-                <button (click)=" save() " class="btn btn-primary ">Save</button>
+                <button (click)="save()" class="btn btn-primary ">Save</button>
             </form>
         </div>
     </div>

@@ -18,11 +18,8 @@ export class AddComponent implements OnInit {
   }
 
   save() {
-    console.log(this.newPerson);
-    
     this.service.createPerson(this.newPerson)
       .subscribe( data => {
-        alert('Successfully added');
         this.router.navigate(['list']);
       });
   }

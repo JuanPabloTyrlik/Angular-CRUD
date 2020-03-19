@@ -19,4 +19,16 @@ export class PersonService {
     return this.httpClient.post<Person>(this.url, person);
   }
 
+  getPersonById(id: string) {
+    return this.httpClient.get<Person>(this.url + '/' + id);
+  }
+
+  editPerson(p: Person) {
+    return this.httpClient.put<Person>(this.url + '/' + p.id, p);
+  }
+
+  deletePerson(p: Person) {
+    return this.httpClient.delete<Person>(this.url + '/' + p.id);
+  }
+
 }

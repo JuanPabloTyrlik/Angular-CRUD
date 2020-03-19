@@ -9,13 +9,15 @@ import { EditComponent } from './person/edit/edit.component';
 import { FormsModule } from '@angular/forms';
 import { PersonService } from './services/person.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     AddComponent,
-    EditComponent
+    EditComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
